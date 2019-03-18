@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giphy cute</title>
+	<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<!-- Heading -->
+		<div class="row text-center">
+			<div class="col-sm-12">
+				<h3>Giphy Fun</h1>
+				<h5>Click the <span class="green">Buttons</span> below to get gifs, or create your own <span class="green">Button</span> by entering a phrase in the <span id="yellow">search box</span> and clicking <span id="red">Generate Button</span>.</h5>
+			</div>
+		</div>
+		<!-- Form containing input box and main buttons -->
+		<div class="container">
+			<form id="giphySearch" class="text-center">
+				<div class="row">
+					<div class="col-sm-12">
+						<input class="text-center" type="text" id="searchPhrase" placeholder="Giphy search term" required>
+					  	<button type="submit" class="button btn-2 btn-2c" id="addToButtons">Generate button</button>
+					  	<button class="button btn-2 btn-2c" id="clearDisplay">Clear Gifs</button>
+				  	</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 text-center">
+						<h5 id="duplicatePrompt">There's a button for it already.</h5>
+					</div>
+				</div>
+			</form>
+		</div>
+		<!-- Div to display dynamically generated buttons -->
+		<div class="row text-center">
+			<div class="col-xs-12 text-center">
+				<div id="buttonDisplay" class="text-center"></div>
+			</div>
+		</div>
+		<!-- Div to display gifs from Giphy -->
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<p id="message">Click once <span id="important">(Trust me, once is enough.)</span> on the gifs below, and watch it animate. Click once more to make it freeze.</p>
+				<div id="giphyDisplay" class="text-center"></div>
+			</div>
+		</div>
+	</div>
+	<!-- Audio files -->
+	<audio id="buttonSelectSound">
+    	<source src="assets/sounds/buttonSelect.mp3">
+	</audio>
+	<audio id="gifClickSound">
+    	<source src="assets/sounds/ting.mp3">
+	</audio>
+</body>
+</html>
